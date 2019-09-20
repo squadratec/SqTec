@@ -1,0 +1,380 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SqTec.Spec</name>
+    </assembly>
+    <members>
+        <member name="T:SqTec.Spec.Dtos.ClienteExibicao">
+            <summary>
+            Representa um cliente pronto para ser exibido em tela
+            </summary>
+        </member>
+        <member name="P:SqTec.Spec.Dtos.ClienteExibicao.Nome">
+            <summary>
+            Nome do cliente
+            </summary>
+        </member>
+        <member name="P:SqTec.Spec.Dtos.ClienteExibicao.Regiao">
+            <summary>
+            Região do cliente
+            </summary>
+        </member>
+        <member name="P:SqTec.Spec.Dtos.ClienteExibicao.Idade">
+            <summary>
+            Idade do cliente
+            </summary>
+        </member>
+        <member name="P:SqTec.Spec.Dtos.ClienteExibicao.MedalhasOuro">
+            <summary>
+            Quantidade de medalhas de ouro do cliente
+            </summary>
+        </member>
+        <member name="P:SqTec.Spec.Dtos.ClienteExibicao.MedalhasPrata">
+            <summary>
+            Quantidade de medalhas de prata do cliente
+            </summary>
+        </member>
+        <member name="P:SqTec.Spec.Dtos.ClienteExibicao.MedalhasBronze">
+            <summary>
+            Quantidade de medalhas de bronze do cliente
+            </summary>
+        </member>
+        <member name="P:SqTec.Spec.Dtos.ClienteExibicao.ValorDesconto">
+            <summary>
+            Desconto em reais do cliente
+            </summary>
+        </member>
+        <member name="T:SqTec.Spec.Dtos.RegiaoExibicao">
+            <summary>
+            Representa os dados de uma região pronta para ser exibida em tela
+            </summary>
+        </member>
+        <member name="P:SqTec.Spec.Dtos.RegiaoExibicao.Regiao">
+            <summary>
+            Nome da região
+            </summary>
+        </member>
+        <member name="P:SqTec.Spec.Dtos.RegiaoExibicao.MedalhasOuro">
+            <summary>
+            Quantidade de medalhas de ouro da região
+            </summary>
+        </member>
+        <member name="P:SqTec.Spec.Dtos.RegiaoExibicao.MedalhasPrata">
+            <summary>
+            Quantidade de medalhas de prata da região
+            </summary>
+        </member>
+        <member name="P:SqTec.Spec.Dtos.RegiaoExibicao.MedalhasBronze">
+            <summary>
+            Quantidade de medalhas de bronze da região
+            </summary>
+        </member>
+        <member name="P:SqTec.Spec.Dtos.RegiaoExibicao.ValorDesconto">
+            <summary>
+            Valor total do desconto da região
+            </summary>
+        </member>
+        <member name="T:SqTec.Spec.Exceptions.CaminhoInvalidoException">
+            <summary>
+            Essa exceção é lançada quando o caminho fornecido não é um caminho válido (contém caracteres inválidos para um caminho)
+            </summary>
+        </member>
+        <member name="M:SqTec.Spec.Exceptions.CaminhoInvalidoException.#ctor(System.String)">
+            <summary>
+            </summary>
+            <param name="caminho">Caminho inválido</param>
+        </member>
+        <member name="T:SqTec.Spec.Exceptions.LinhaInvalidaException">
+            <summary>
+            Essa exceção é lançada quando uma linha contida no arquivo txt não está em um formato correto
+            </summary>
+        </member>
+        <member name="M:SqTec.Spec.Exceptions.LinhaInvalidaException.#ctor(System.String)">
+            <summary>
+            </summary>
+            <param name="linha">Linha extraída do arquivo txt</param>
+        </member>
+        <member name="T:SqTec.Spec.Exceptions.ConfiguracaoNaoEncontradaException">
+            <summary>
+            Essa exceção é lançada quando a chave não foi encontrada no arquivo de configuração
+            </summary>
+        </member>
+        <member name="M:SqTec.Spec.Exceptions.ConfiguracaoNaoEncontradaException.#ctor(System.String)">
+            <summary>
+            </summary>
+            <param name="nomeConfiguracao">Nome da configuração</param>
+        </member>
+        <member name="T:SqTec.Spec.Exceptions.TransacaoFechadaException">
+            <summary>
+            Essa exceção é lançada quando tenta-se realizar uma operação que dependa da transação aberta, no entanto ela encontra-se com o estado fechado
+            </summary>
+        </member>
+        <member name="T:SqTec.Spec.Exceptions.TransacaoAbertaException">
+            <summary>
+            Essa exceção é lançada quando tenta-se iniciar uma nova transação com o estado da transação aberto
+            </summary>
+        </member>
+        <member name="T:SqTec.Spec.Exceptions.CaminhoTxtException">
+            <summary>
+            Essa exceção é lançada quando o caminho fornecido não é de um arquivo txt
+            </summary>
+        </member>
+        <member name="M:SqTec.Spec.Exceptions.CaminhoTxtException.#ctor(System.String)">
+            <summary>
+            </summary>
+            <param name="caminho">Caminho que não é de um arquivo txt</param>
+        </member>
+        <member name="T:SqTec.Spec.Exceptions.TxtNaoEncontradoException">
+            <summary>
+            Essa exceção é lançada quando o arquivo txt não é encontrado
+            </summary>
+        </member>
+        <member name="T:SqTec.Spec.IoC.Container">
+            <summary>
+            Container para registro das dependências do sistema
+            </summary>
+        </member>
+        <member name="M:SqTec.Spec.IoC.Container.Inicializar">
+            <summary>
+            Inicializa o container
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SqTec.Spec.IoC.Container.Dispose">
+            <summary>
+            Libera o cache das instâncias
+            </summary>
+        </member>
+        <member name="M:SqTec.Spec.IoC.Container.Registrar``2">
+            <summary>
+            Regista uma dependência
+            </summary>
+            <typeparam name="TServico">Interface</typeparam>
+            <typeparam name="TImplementacao">Implementação da interface</typeparam>
+        </member>
+        <member name="M:SqTec.Spec.IoC.Container.Registrar``1">
+            <summary>
+            Regista uma dependência concreta
+            </summary>
+            <typeparam name="TConcreto">Tipo concreto</typeparam>
+        </member>
+        <member name="M:SqTec.Spec.IoC.Container.ObterInstancia``1">
+            <summary>
+            Obtém uma instância do tipo do serviço
+            </summary>
+            <typeparam name="TServico">Tipo do serviço</typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:SqTec.Spec.Services.IClienteService">
+            <summary>
+            Serviços do cliente
+            </summary>
+        </member>
+        <member name="M:SqTec.Spec.Services.IClienteService.BeginTransaction">
+            <summary>
+            Inicia uma transação
+            </summary>
+            <exception cref="T:SqTec.Spec.Exceptions.TransacaoAbertaException">Exceção lançada quando tenta-se iniciar uma transação com o estado da transação atual aberto</exception>
+        </member>
+        <member name="M:SqTec.Spec.Services.IClienteService.Commit">
+            <summary>
+            Grava os dados realizados por uma transação
+            </summary>
+            <exception cref="T:SqTec.Spec.Exceptions.TransacaoFechadaException">Exceção lançada quando quando tenta-se realizar o commit em uma transação com o estado fechado</exception>
+        </member>
+        <member name="M:SqTec.Spec.Services.IClienteService.Rollback">
+            <summary>
+            Realiza o rollback das alterações feitas em uma transação
+            </summary>
+            <exception cref="T:SqTec.Spec.Exceptions.TransacaoFechadaException">Exceção lançada quando quando tenta-se realizar o rollback em uma transação com o estado fechado</exception>
+        </member>
+        <member name="M:SqTec.Spec.Services.IClienteService.Inserir(SqTec.Spec.Entities.ICliente)">
+            <summary>
+            Insere o cliente
+            </summary>
+            <param name="cliente">O cliente a ser inserido</param>
+            <exception cref="T:System.ArgumentNullException">Exceção lançada quando o parâmetro "cliente" é nulo</exception>
+            <exception cref="T:SqTec.Spec.Exceptions.TransacaoFechadaException">Exceção lançada quando quando tenta-se inserir um registro fora de uma transação</exception>
+        </member>
+        <member name="M:SqTec.Spec.Services.IClienteService.Atualizar(SqTec.Spec.Entities.ICliente)">
+            <summary>
+            Atualiza os dados do cliente através do IdentificadorERP
+            </summary>
+            <param name="cliente">O cliente a ser atualizado</param>
+            <exception cref="T:System.ArgumentNullException">Exceção lançada quando o parâmetro "cliente" é nulo</exception>
+            <exception cref="T:SqTec.Spec.Exceptions.TransacaoFechadaException">Exceção lançada quando quando tenta-se atualizar um registro fora de uma transação</exception>
+        </member>
+        <member name="M:SqTec.Spec.Services.IClienteService.ObterPorId(System.Guid)">
+            <summary>
+            Retorna o cliente através do IdentificadorERP
+            </summary>
+            <param name="identificadorErp">Identificador a ser pesquisado</param>
+            <returns>
+            Se o identificadorErp for encontrado, retorna o cliente. Caso contrário, retorna nulo.
+            Se a obtenção for realizada sob uma transação, os dados que estão sendo transacionados devem ser considerados na busca.
+            </returns>
+        </member>
+        <member name="M:SqTec.Spec.Services.IClienteService.Listar">
+            <summary>
+            Lista todos os clientes salvos
+            </summary>
+            <returns>
+            Lista dos clientes salvos.
+            Se a listagem for realizada sob uma transação, os dados que estão sendo transacionados devem ser considerados na busca.
+            </returns>
+        </member>
+        <member name="M:SqTec.Spec.Services.IClienteService.ObterClientesDeTxt(System.String)">
+            <summary>
+            Recupera os clientes presentes no caminho passado como parâmetro
+            </summary>        
+            <param name="caminho">Caminho do arquivo txt com os clientes</param>
+            <exception cref="T:System.ArgumentException">Exceção lançada quando o parâmetro "caminho" é nulo, vazio ou há somente espaços em branco</exception>
+            <exception cref="T:SqTec.Spec.Exceptions.CaminhoInvalidoException">Exceção lançada quando o caminho fornecido não é um caminho válido (contém caracteres inválidos para um caminho)</exception>
+            <exception cref="T:SqTec.Spec.Exceptions.CaminhoTxtException">Exceção lançada quando o caminho fornecido não é de um arquivo txt</exception>
+            <exception cref="T:SqTec.Spec.Exceptions.TxtNaoEncontradoException">Exceção lançada quando o arquivo txt não é encontrado</exception>
+            <returns>Lista dos clientes presentes no arquivo</returns>
+        </member>
+        <member name="M:SqTec.Spec.Services.IClienteService.CalcularIdade(SqTec.Spec.Entities.ICliente)">
+            <summary>
+            Retorna a idade do cliente
+            </summary>
+            <param name="cliente">Objeto cliente</param>        
+            <exception cref="T:System.ArgumentNullException">Exceção lançada quando o parâmetro "cliente" é nulo</exception>
+            <returns>A idade do cliente</returns>
+        </member>
+        <member name="T:SqTec.Spec.Services.IConfigService">
+            <summary>
+            Serviços de configuração
+            </summary>
+        </member>
+        <member name="M:SqTec.Spec.Services.IConfigService.ObterConfiguracao``1(System.String)">
+            <summary>
+            Retorna o valor da configuração do App.Config através da chave, convertendo para o tipo T
+            </summary>
+            <typeparam name="T">Tipo para converter o valor da chave</typeparam>
+            <param name="chave">Chave a ser pesquisada no arquivo de configuração</param>
+            <exception cref="T:System.ArgumentException">Exceção lançada quando o parâmetro "chave" é nulo, vazio ou há somente espaços em branco</exception>
+            <exception cref="T:SqTec.Spec.Exceptions.ConfiguracaoNaoEncontradaException">Exceção lançada quando a chave não foi encontrada no App.Config</exception>
+            <returns>O valor da chave enviada convertido para o tipo T</returns>
+        </member>
+        <member name="T:SqTec.Spec.Services.ILogService">
+            <summary>
+            Serviços de log
+            </summary>
+        </member>
+        <member name="M:SqTec.Spec.Services.ILogService.Log(System.String)">
+            <summary>
+            Salva no arquivo de log a mensagem.
+            O caminho do arquivo de log deve ser recuperado do arquivo de configuração.
+            Se o arquivo de log existir, a mensagem é anexada no final do arquivo.
+            Se o arquivo de log não existir, ele é criado e a mensagem é anexada.
+            </summary>
+            <param name="mensagem">Mensagem a ser salva no log</param>
+            <exception cref="T:System.ArgumentException">Exceção lançada quando a parâmetro "mensagem" é nulo, vazio ou há somente espaços em branco</exception>
+        </member>
+        <member name="M:SqTec.Spec.Services.ILogService.Log(System.Exception)">
+            <summary>
+            Salva no arquivo de log a mensagem da exceção.
+            O caminho do arquivo de log deve ser recuperado do arquivo de configuração.
+            Se o arquivo de log existir, a mensagem é anexada no final do arquivo.
+            Se o arquivo de log não existir, ele é criado e a mensagem é anexada.
+            </summary>
+            <param name="ex">Exceção a ser salva no log</param>
+            <exception cref="T:System.ArgumentNullException">Exceção lançada quando o parâmetro "ex" é nulo</exception>
+        </member>
+        <member name="T:SqTec.Spec.Services.IPremiacaoService">
+            <summary>
+            Serviços de premiação
+            </summary>
+        </member>
+        <member name="M:SqTec.Spec.Services.IPremiacaoService.CalcularMedalhasOuro(SqTec.Spec.Entities.ICliente)">
+            <summary>
+            Calcula e retorna a quantidade de medalhas de ouro de um cliente
+            </summary>
+            <param name="cliente">Objeto cliente</param>
+            <exception cref="T:System.ArgumentNullException">Exceção lançada quando o parâmetro "cliente" é nulo</exception>
+            <returns>A quantidade de madalhas de ouro</returns>
+        </member>
+        <member name="M:SqTec.Spec.Services.IPremiacaoService.CalcularMedalhasPrata(SqTec.Spec.Entities.ICliente)">
+            <summary>
+            Calcula e retorna a quantidade de medalhas de prata de um cliente
+            </summary>
+            <param name="cliente">Objeto cliente</param>
+            <exception cref="T:System.ArgumentNullException">Exceção lançada quando o parâmetro "cliente" é nulo</exception>
+            <returns>A quantidade de madalhas de prata</returns>
+        </member>
+        <member name="M:SqTec.Spec.Services.IPremiacaoService.CalcularMedalhasBronze(SqTec.Spec.Entities.ICliente)">
+            <summary>
+            Calcula e retorna a quantidade de medalhas de bronze de um cliente
+            </summary>
+            <param name="cliente">Objeto cliente</param>
+            <exception cref="T:System.ArgumentNullException">Exceção lançada quando o parâmetro "cliente" é nulo</exception>
+            <returns>A quantidade de madalhas de bronze</returns>
+        </member>
+        <member name="M:SqTec.Spec.Services.IPremiacaoService.CalcularDesconto(SqTec.Spec.Entities.ICliente)">
+            <summary>
+            Calcula e retorna o desconto final que do cliente tem em reais
+            </summary>
+            <param name="cliente">Objeto cliente</param>
+            <exception cref="T:System.ArgumentNullException">Exceção lançada quando o parâmetro "cliente" é nulo</exception>
+            <returns>O desconto final do cliente em reais</returns>
+        </member>
+        <member name="T:SqTec.Spec.Services.IExibicaoService">
+            <summary>
+            Serviços de exibição
+            </summary>
+        </member>
+        <member name="M:SqTec.Spec.Services.IExibicaoService.ExibirClientes(System.Collections.Generic.IEnumerable{SqTec.Spec.Dtos.ClienteExibicao})">
+            <summary>
+            Exibe no console os dados dos clientes
+            </summary>
+            <param name="clientes">Lista de ClienteExibicao</param>
+            <exception cref="T:System.ArgumentNullException">Exceção lançada quando o parâmetro "clientes" é nulo</exception>
+        </member>
+        <member name="M:SqTec.Spec.Services.IExibicaoService.ExibirSumarizadoPorRegiao(System.Collections.Generic.IEnumerable{SqTec.Spec.Dtos.RegiaoExibicao})">
+            <summary>
+            Exibe no console os dados dos clientes sumarizados por região
+            </summary>
+            <param name="regioes">Lista de RegiaoExibicao</param>
+            <exception cref="T:System.ArgumentNullException">Exceção lançada quando o parâmetro "regioes" é nulo</exception>
+        </member>
+        <member name="M:SqTec.Spec.Services.IExibicaoService.AgruparClientesExibicaoPorRegiao(System.Collections.Generic.IEnumerable{SqTec.Spec.Dtos.ClienteExibicao})">
+            <summary>
+            Agrupa os clientes de acordo com sua região
+            </summary>
+            <param name="clientes">Lista de ClienteExibicao</param>
+            <exception cref="T:System.ArgumentNullException">Exceção lançada quando o parâmetro "clientes" é nulo</exception>
+            <returns>Lista de RegiaoExibicao baseada na lista de ClienteExibicao</returns>
+        </member>
+        <member name="T:SqTec.Spec.Entities.ICliente">
+            <summary>
+            Representa um cliente no SqTec
+            </summary>
+        </member>
+        <member name="P:SqTec.Spec.Entities.ICliente.IdentificadorERP">
+            <summary>
+            ID do cliente
+            </summary>
+        </member>
+        <member name="P:SqTec.Spec.Entities.ICliente.Nome">
+            <summary>
+            Nome do cliente
+            </summary>
+        </member>
+        <member name="P:SqTec.Spec.Entities.ICliente.DataNascimento">
+            <summary>
+            Data de nascimento do cliente
+            </summary>
+        </member>
+        <member name="P:SqTec.Spec.Entities.ICliente.Regiao">
+            <summary>
+            Região do cliente
+            </summary>
+        </member>
+        <member name="P:SqTec.Spec.Entities.ICliente.Pontos">
+            <summary>
+            Quantidade de pontos do cliente
+            </summary>
+        </member>
+    </members>
+</doc>
